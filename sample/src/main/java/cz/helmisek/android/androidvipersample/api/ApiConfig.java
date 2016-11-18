@@ -1,9 +1,5 @@
 package cz.helmisek.android.androidvipersample.api;
 
-/**
- * Created by Jirka Helmich on 11.10.16.
- */
-
 public final class ApiConfig
 {
 	/**
