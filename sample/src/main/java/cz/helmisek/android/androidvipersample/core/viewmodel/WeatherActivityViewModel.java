@@ -55,7 +55,8 @@ public class WeatherActivityViewModel extends ViewModel<WeatherInteractor, Weath
 
 				state.set(currentWeatherEntityResponse.isSuccessful() ? StatefulLayout.State.CONTENT : StatefulLayout.State.EMPTY);
 
-				WeatherActivityViewModel.this.mPresenterViewModelContract.onWeatherInformationReady(currentWeatherEntityResponse.isSuccessful());
+				if(WeatherActivityViewModel.this.mPresenterViewModelContract != null)
+					WeatherActivityViewModel.this.mPresenterViewModelContract.onWeatherInformationReady(currentWeatherEntityResponse.isSuccessful());
 			}
 		});
 

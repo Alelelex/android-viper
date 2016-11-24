@@ -1,5 +1,9 @@
 package cz.helmisek.android.androidvipersample.core.interactor;
 
+import android.net.Network;
+
+import org.robolectric.annotation.Implements;
+
 import java.io.IOException;
 
 import cz.helmisek.android.androidviper.core.interactor.Interactor;
@@ -13,7 +17,7 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.schedulers.Schedulers;
 
-
+@Implements(Network.class)
 abstract class RetrofitApiInteractor<IDC> extends Interactor<IDC>
 {
 
